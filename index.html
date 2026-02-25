@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>허석훈 | Portfolio</title>
+<style>
+:root{
+  --bg:#0f172a;
+  --card:rgba(255,255,255,.08);
+  --text:#fff;
+  --sub:#cbd5e1;
+  --accent:linear-gradient(135deg,#7c3aed,#06b6d4);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body{
+  font-family:system-ui;
+  background:radial-gradient(circle at 20% 20%,#1e293b,#0f172a);
+  color:var(--text);
+}
+section{padding:80px 20px;max-width:1000px;margin:auto}
+h1,h2{margin-bottom:20px}
+p{color:var(--sub);line-height:1.6}
+.card{
+  background:var(--card);
+  backdrop-filter:blur(12px);
+  padding:20px;
+  border-radius:20px;
+  transition:.3s;
+}
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 20px 40px rgba(0,0,0,.4);
+}
+.grid{
+  display:grid;
+  gap:20px;
+}
+@media(min-width:768px){
+  .grid-2{grid-template-columns:1fr 1fr}
+  .grid-3{grid-template-columns:1fr 1fr 1fr}
+}
+button{
+  padding:12px 20px;
+  border:none;
+  border-radius:12px;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+.hero h1{
+  font-size:40px;
+  background:var(--accent);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  padding:15px 20px;
+  background:rgba(15,23,42,.8);
+  backdrop-filter:blur(10px);
+  display:flex;
+  justify-content:space-between;
+}
+nav a{
+  color:white;
+  margin-left:20px;
+  text-decoration:none;
+}
+footer{
+  text-align:center;
+  padding:40px 20px;
+  color:var(--sub);
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div><strong>허석훈</strong></div>
+  <div>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <h1>Cloud & Network Engineer</h1>
+  <p>클라우드 전환을 준비 중인 네트워크 엔지니어. 인프라 자동화와 안정적인 아키텍처 구축에 관심이 있습니다.</p>
+  <br>
+  <button onclick="location.href='#contact'">Contact Me</button>
+</section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <div class="card">
+    <p>
+      네트워크 현장 엔지니어 경력 2년. 
+      AWS 기반 클라우드 엔지니어로 전환 준비 중이며,
+      인프라 설계와 문제 해결 역량을 갖추고 있습니다.
+    </p>
+  </div>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid grid-3">
+    <div class="card">Networking<br><small>Routing, Switching</small></div>
+    <div class="card">Cloud<br><small>AWS (SAA 준비)</small></div>
+    <div class="card">Linux<br><small>Server 운영</small></div>
+  </div>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid grid-2">
+    <div class="card">
+      <h3>VPC 3-Tier Architecture</h3>
+      <p>AWS 기반 웹 아키텍처 설계</p>
+    </div>
+    <div class="card">
+      <h3>On-Prem to Cloud</h3>
+      <p>기존 네트워크 환경 클라우드 이전 설계</p>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: your@email.com</p>
+    <p>GitHub: github.com/yourid</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 허석훈 Portfolio
+</footer>
+
+</body>
+</html>
